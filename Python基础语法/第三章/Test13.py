@@ -1,5 +1,4 @@
 # 内置函数
-
 # 作用域相关函数:globals，locals
 a=10
 def func():
@@ -57,9 +56,8 @@ c1=compile("print('hello world')",'','exec')
 b=exec(c1)
 print(b)
 c2=compile("n=int(input('输入:'))",'','single')
-exec(c2)
+n=exec(c2)
 print(n)
-
 #基础数据类型相关函数：int float bool complex（复数）
 hg=1.25
 print(hg)
