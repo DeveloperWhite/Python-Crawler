@@ -62,6 +62,86 @@ print(n)
 hg=1.25
 print(hg)
 print(type(hg))
-# 进制转换相关
+# 进制转换相关bin oct hex
+print(bin(10)) # 二进制 010101
+print(oct(10)) # 八进制 0-7
+print(hex(10)) # 十六进制 0-9-a-f
+# 数学运算
+print(abs(-10)) # 绝对值
+print(divmod(10,3)) # 除法取余
+print(pow(2,3)) # 乘方
+print(round(1.23456,3)) # 四舍五入
+print(max(1,2,3,4,5)) # 最大值
+print(min(1,2,3,4,5)) # 最小值
+print(sum([1,2,3,4,5])) # 求和
+
+# 数据集合相关的
+# 字典
+d=dict([('name','张三'),('age',18)]) # 字典的创建
+print(d)
+# 集合
+s=set([1,2,3,4,5]) # 集合的创建
+print(s)
+s=frozenset([1,2,3,4,5]) # 冻结集合，不能修改
+print(s)
+# 相关内置函数
+# 列表既拿索引，又拿值
+lst=["张三","王五","李六"]
+for i in range(len(lst)):
+    print(i)
+    print(lst[i])
+# v可以在enumerate函数中指定索引的起始值
+# 不写v就是从0开始，可以直接拿到索引和值
+for i,v in enumerate(lst,11):  # 用enumerate函数，可以同时拿到索引和值
+    print(i)
+    print(v)
+lst=[0,"hehe",True]
+print(any(lst)) # 判断列表中是否有值，相当于or
+print(all(lst)) # 判断列表中是否都是值，相当于and
+# zip函数，把两个列表组合成一个元组列表，水桶效应，以最短的合并为基准
+lst1=[1,2,3]
+lst2=["a","b","c"]
+for i in zip(lst1,lst2): # 用zip函数，可以同时拿到索引和值
+    print(i)
+# zip可以快速构建字典
+d=dict(zip(lst1,lst2))
+print(d)
+
+# 序列相关函数：reversed slice
+lst=[1,2,3,4,5]
+r=reversed(lst)
+print(list(r)) # 翻转
+a="今天天气不错" # 切片
+a1="哈呵护黑你好"
+# 函数可重复使用
+# 切片还可以指定步长
+s=slice(2,5,2)  # 从索引2开始，到索引5结束，不包含索引5，步长为2
+print(a[s]) # 天不
+print(a1[s]) # 护你
+# 字符串
+# 字符和数字的相互转换
+print(ord('中')) # 返回字符的ASCII码
+print(chr(20013)) # 返回ASCII码对应的字符
+# chr可以用来生成验证码
+import random
+n=chr(random.randint(65,90)) # 生成大写字母
+print(n)
+# repr 用来获取字符串的原始值(字符串最规范的写法)
+print(str("123"))
+print(repr("123"))
+# 当字符串中出现转义字符时，可以用r来取消转义
+print("123\n456")
+print(r"123\n456") # 123\n456
+# format 格式化字符串（想要一个定长的数字）
+a=48
+print(format(a,"08"))  # 08表示8位，不够用0补齐
+# 定长的二进制
+print(format(a,"08b")) # 08b表示8位，不够用0补齐，二进制
+# 定长的小数点后几位
+b=1.25
+print(format(b,".8f")) # .8f表示小数点后八位
+
+
+
 
 
