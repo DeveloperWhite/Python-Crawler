@@ -10,8 +10,8 @@
 把原来的文件删除
 把副本文件重命名为原来的文件名
 '''
-with open("/workspace/Python基础语法/第二章/a.txt",mode="r",encoding="utf-8") as f, \
-    open("/workspace/Python基础语法/第二章/a_副本.txt",mode="w",encoding="utf-8") as f1:
+with open("/workspace/Python Basic Syntax/Chapter Two/a.txt",mode="r",encoding="utf-8") as f, \
+    open("/workspace/Python Basic Syntax/Chapter Two/a_副本.txt",mode="w",encoding="utf-8") as f1:
    for line in f:
        if "阿" in line:
            line=line.replace("阿","阿达")
@@ -21,9 +21,9 @@ with open("/workspace/Python基础语法/第二章/a.txt",mode="r",encoding="utf
 # 导入os模块
 import os   
 # 删除文件
-os.remove("/workspace/Python基础语法/第二章/a.txt") 
+os.remove("/workspace/Python Basic Syntax/Chapter Two/a.txt")
 # 重命名文件
-os.rename("/workspace/Python基础语法/第二章/a_副本.txt","/workspace/Python基础语法/第二章/a.txt")
+os.rename("/workspace/Python Basic Syntax/Chapter Two/a_副本.txt","/workspace/Python Basic Syntax/Chapter Two/a.txt")
 
 
 # 读取规则文件
@@ -37,7 +37,7 @@ os.rename("/workspace/Python基础语法/第二章/a_副本.txt","/workspace/Pyt
 '''
 # 最终以上面格式的数据进行返回
 # 1.打开文件
-with open("/workspace/Python基础语法/第二章/b.txt",mode="r",encoding="utf-8") as f:
+with open("/workspace/Python Basic Syntax/Chapter Two/b.txt",mode="r",encoding="utf-8") as f:
     # 第一行单独读取
     head=f.readline()
     # 把头处理成列表

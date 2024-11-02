@@ -1,8 +1,8 @@
 # while循环
-'''
+"""
 while 条件：
     循环体
-    '''
+    """
 '''
 while True:
     print("hello world")
