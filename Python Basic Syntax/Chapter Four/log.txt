@@ -1,0 +1,15 @@
+2024-11-09 14:36:41-root-CRITICAL-Test7:这是一个致命错误
+2024-11-09 14:36:41-root-ERROR-Test7:这是一个错误
+2024-11-09 14:36:41-root-WARNING-Test7:这是一个警告
+2024-11-09 14:36:41-root-INFO-Test7:这是一个信息
+2024-11-09 14:36:41-root-DEBUG-Test7:这是一个调试信息
+2024-11-09 14:38:37-root-CRITICAL-Test7:这是一个致命错误
+2024-11-09 14:38:37-root-ERROR-Test7:这是一个错误
+2024-11-09 14:38:37-root-WARNING-Test7:这是一个警告
+2024-11-09 14:38:37-root-INFO-Test7:这是一个信息
+2024-11-09 14:38:37-root-DEBUG-Test7:这是一个调试信息
+2024-11-09 14:39:14-root-CRITICAL-Test7:这是一个致命错误
+2024-11-09 14:39:14-root-ERROR-Test7:这是一个错误
+2024-11-09 14:39:14-root-WARNING-Test7:这是一个警告
+2024-11-09 14:39:14-root-INFO-Test7:这是一个信息
+2024-11-09 14:39:14-root-DEBUG-Test7:这是一个调试信息
