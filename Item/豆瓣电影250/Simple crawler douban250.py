@@ -33,7 +33,7 @@ def parse_html(html):
 # 启动函数
 def main():
     # 写入文件中
-    f=open("top250.xlsx",mode="w",encoding="utf-8")
+    f=open("top250.xlsx", mode="w", encoding="utf-8")
     # 用来分页，获取不同页数的数据
     for i in range(10):
         s=get_html(f"https://movie.douban.com/top250?start={i*25}&filter=")
