@@ -1,10 +1,13 @@
 # 爬虫基础
 # 准备一个网站
 # url= 'http://www.baidu.com'
-from urllib.request import urlopen
-url = 'http://www.baidu.com'
-resp = urlopen(url) # 通过urlopen方法打开url
-print(resp.read().decode('utf-8'))
+# from urllib.request import urlopen
+#
+# from urllib3 import request
+#
+# url = 'http://www.baidu.com'
+# resp = urlopen(url) # 通过urlopen方法打开url
+# print(resp.read().decode('utf-8'))
 # 不是有所的网站把数据直接展示在页面源代码上的
 # 第二种请求方式：
 # 输入网址后，服务器会返回一个页面源代码（可能会缺少一些数据）
@@ -51,7 +54,23 @@ print(resp.read().decode('utf-8'))
 # 空行
 # 响应体：服务器返回真正客户端要用的内容，页面源代码
 
+# 重点内容:
+# User-Agent：用户的助手：表示用户在访问这个网站时所用的设备（存在于请求头之中）
+# 服务器返回的响应头中会有cookie的信息
+# 请求方式：（实际上有9种）
+# get：显示请求，能在地址栏直接看到get提交的数据，浏览器直接输入网址的位置（这一次请求是get请求），超链接一般情况下是get请求
+# post：隐示请求（post提交的数据一般在地址栏看不见），表单（登录，注册，输入密码的地方）
 
+# requests模块入门(重点):第三方模块,优势:比urllib简单
+import requests
+# request核心功能:发起请求
+#第一个案例
+url="https://www.sogou.com/web?query=周润发"
+# 发送请求
+resp=requests.get(url) #发送get请求
+# request.post() #发送post请求
+print(resp) #<Response [200]>
+print(resp.text) #获取响应体内容
+print(resp.request.headers) #获取请求头中的UA信息
 
-
-
+# 所以要进行伪装，设计一个UA信息，伪装成浏览器
