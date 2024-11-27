@@ -64,13 +64,20 @@
 # requests模块入门(重点):第三方模块,优势:比urllib简单
 import requests
 # request核心功能:发起请求
-#第一个案例
-url="https://www.sogou.com/web?query=周润发"
-# 发送请求
-resp=requests.get(url) #发送get请求
+
+#第一个案例：搜狗搜索
+content=input("请输入要搜索的内容：")
+url=f"https://www.sogou.com/web?query={content}"
+# 所以要进行伪装，设计一个UA信息，伪装成浏览器，header是自己定义的
+headers={
+    "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+}
+# 发送请求，第一个headers是固定的，第二个headers是自定义的，上面定义的是啥，这里就是啥
+resp=requests.get(url,headers=headers) #发送get请求
 # request.post() #发送post请求
 print(resp) #<Response [200]>
 print(resp.text) #获取响应体内容
 print(resp.request.headers) #获取请求头中的UA信息
 
-# 所以要进行伪装，设计一个UA信息，伪装成浏览器
+# 第二个案例：百度翻译
+

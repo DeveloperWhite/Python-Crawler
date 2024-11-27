@@ -17,7 +17,7 @@ def get_html(url):
 import re
 # 我要获取排名，电影名，评分，评价人数
 def parse_html(html):
-    obj =re.compile(r'<div class="item">.*?<em class="">(?P<rate>.*?)</em>.*?'
+    obj =re.compile(r'<em class="">(?P<rate>.*?)</em>.*?'
                     r'<span class="title">(?P<Title>.*?)</span>.*?'
                     r'<span class="rating_num" property="v:average">(?P<rating_num>.*?)</span>.*?'
                     r'<span>(?P<person_num>.*?)人评价</span>',re.S)
