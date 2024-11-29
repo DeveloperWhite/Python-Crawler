@@ -80,4 +80,4 @@ print(resp.text) #获取响应体内容
 print(resp.request.headers) #获取请求头中的UA信息
 
 # 第二个案例：百度翻译
-
+# post请求在url上看不到参数
